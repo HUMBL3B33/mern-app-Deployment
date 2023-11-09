@@ -2,10 +2,12 @@
 
 - This guide offers a detailed walkthrough for deploying a full-stack web application on the AWS cloud, incorporating NGINX server configuration.
 - The application features comprehensive user authentication and interaction capabilities, including user registration, login, and access to personalized functionalities.
-- It prioritizes security, user-friendliness, and data integrity, making it a reliable platform for data management and interaction.
 - The frontend utilizes React for an intuitive user interface, while the backend, powered by Node.js and Express, handles data processing and communicates with an RDS MySQL database.
-- NGINX is employed to enhance both performance and security.
-- This application can serve as a solid foundation for the development of dynamic and data-driven web services.
+- NGINX is employed to enhance both performance and security and to re-route the request from <IP:PORT> to <IP>.
+- It also features an Autoscaling group that allows machines to be scaled up or down based on CPU usage.
+- ASG uses a custom AMI and launch template with custom script in order to facilitate application setup and running the application.
+- Monitoring and observability is achieved through cloudwatch and SNS.
+- Jenkins is used on <IP:8080> to perform complete CICD.
 
 ## Prerequisites
 
