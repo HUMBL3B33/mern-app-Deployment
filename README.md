@@ -156,8 +156,12 @@ Before you begin, you should have the following:
 
     - Access the application on your EC2 instance's public IP address without specifying a port.
 
-## Conclusion
+## Lesson Learned
 
-Following these steps will enable you to deploy a full-stack application with NGINX on AWS. Remember to replace placeholders like `<instance_public_ip>`, `<RDS_Endpoint>`, `<user_name>`, and `<db_name>` with your specific configuration details. You can now access your application via your EC2 instance's public IP address.
-
-
+- Learnt how to setup an entire 3 Tier Networking configuration inside AWS.
+- Setup Autoscaling group in order to facilitate automatic scaling based on CPU utilization.
+- Setup Nginx configuration to listen for a specific port and redirect the request to an application without using the default path based routing.
+- Setup custom AMI and custom launch script in order to run application with the autoscaling group in place.
+- Setup RDS instance and connectivity between RDS and backend node application running on EC2.
+- Set up Cloudwatch to gather relevant metrices and logs in order to maintain monitoring and observability.
+- Set up Jenkins Pipeline for end to end CI/CD.
